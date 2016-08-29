@@ -9,3 +9,32 @@ git checkout master
 git merge dev
 删除分支：git branch -d <name>
 
+#解决合并冲突：
+&创建新分支fea
+$ git checkout -b feature1
+&修改文件最后一行
+&在fea 分支提交
+git add readme.txt
+$ git commit -m "AND simple"
+& 切换到master分支
+ git checkout master
+并在master分支上把readme.txt文件的最后一行
+& 提交：
+git add readme.txt
+$ git commit -m "& simple"
+& 将fea分支合并到master，出现了合并冲突
+
+& 查看文件，手动修改
+
+& 再提交；
+git add readme.txt
+$ git commit -m "conflict fixed"
+& 再次合并
+用带参数的git log也可以看到分支的合并情况
+
+最后，删除feature1分支：
+git branch -d feature1
+
+
+
+
